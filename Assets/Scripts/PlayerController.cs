@@ -1,9 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Net.NetworkInformation;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Utilities;
+using TMPro;
+using System;
 
 public class PlayerController : MonoBehaviour
 {
@@ -17,6 +16,15 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float playerJumpForce = 1.0f;
     [SerializeField] float playerLookSensitivityX = 1.0f;
     [SerializeField] float playerLookSensitivityY = 1.0f;
+    [SerializeField] public int maxStamina;
+    [SerializeField] public int currentStamina;
+    [SerializeField] public int points;
+    [SerializeField] public int maxAmmo;
+    [SerializeField] public int currentAmmo;
+    [SerializeField] float time = 0.0f;
+    [SerializeField] float tickerTimer = 0.1f;
+    [SerializeField] bool isDead;
+    
 
     Vector2 movementInput;
     bool grounded;
@@ -24,24 +32,35 @@ public class PlayerController : MonoBehaviour
 
     InputAction playerMovement;
     InputAction playerJump;
+    InputAction playerShoot;
+    InputAction playerSprint;
+    InputAction playerLook;
 
-    void OnEnable()
+    public event Action OnStatsChanged;
+
+    public void OnEnable()
     {
         
     }
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public void Start()
     {
         playerMovement = InputSystem.actions.FindAction("Move");
         playerJump = InputSystem.actions.FindAction("Jump");
+        playerShoot = InputSystem.actions.FindAction("Attack");
+        playerSprint = InputSystem.actions.FindAction("Sprint");
+        playerLook = InputSystem.actions.FindAction("Look");
     }
 
     // Update is called once per frame
-    void Update()
+    public void Update()
     {
         UpdateMovement();
+        StaminaTicker();
+
+        time += Time.deltaTime;
     }
 
     public void OnMove()
@@ -60,5 +79,22 @@ public class PlayerController : MonoBehaviour
     {
         playerRigidBody.AddForce(Vector3.up * playerJumpForce, ForceMode.Impulse);
     }
+
+    public void DamagePlayer()
+    {
+        currentStamina -= 5;
+    }
+
+    public void StaminaTicker()
+    {
+        if (isDead) return;
+        if (time >= tickerTimer) 
+        {
+            time = time - tickerTimer;
+            currentStamina -= 1;
+        }
+    }
+
+     
 
 }
