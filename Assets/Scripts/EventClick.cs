@@ -1,8 +1,13 @@
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.EventSystems;
 
 public class EventClick : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler
 {
+    int clickCount;
+
+    public UnityAction<int> OnClick;
+
     public void OnPointerDown(PointerEventData eventData)
     {
         // Empty
@@ -15,7 +20,10 @@ public class EventClick : MonoBehaviour, IPointerDownHandler, IPointerUpHandler,
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        this.gameObject.SetActive(false);
+        //this.gameObject.SetActive(false);
+
+        clickCount++;
+        OnClick?.Invoke(clickCount);
     }
 
     public void OnPointerEnter(PointerEventData eventData)
