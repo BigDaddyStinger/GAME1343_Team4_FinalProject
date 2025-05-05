@@ -3,6 +3,7 @@ using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Utilities;
 using TMPro;
 using System;
+using System.Collections;
 
 public class PlayerController : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class PlayerController : MonoBehaviour
 
 
     [SerializeField] float playerSpeed = 1.0f;
+    [SerializeField] float moveSpeedModifier = 2.0f;
     [SerializeField] float playerJumpForce = 1.0f;
     [SerializeField] float playerLookSensitivityX = 1.0f;
     [SerializeField] float playerLookSensitivityY = 1.0f;
@@ -24,6 +26,10 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float time = 0.0f;
     [SerializeField] float tickerTimer = 0.1f;
     [SerializeField] bool isDead;
+    [SerializeField] bool isMoving;
+    [SerializeField] bool isPaused;
+    [SerializeField] bool isGameOver;
+    [SerializeField] bool isGrounded;
     
 
     Vector2 movementInput;
@@ -52,6 +58,11 @@ public class PlayerController : MonoBehaviour
         playerShoot = InputSystem.actions.FindAction("Attack");
         playerSprint = InputSystem.actions.FindAction("Sprint");
         playerLook = InputSystem.actions.FindAction("Look");
+
+        isGameOver = false;
+        isDead = false;
+        isPaused = false;
+        isMoving = false;
     }
 
     // Update is called once per frame
@@ -68,6 +79,12 @@ public class PlayerController : MonoBehaviour
         Debug.Log("I AM MOVING");
         Vector2 moveValue = playerMovement.ReadValue<Vector2>() * playerSpeed * Time.deltaTime;
         transform.Translate(moveValue.x, 0, moveValue.y);
+
+        while (moveValue.y == 0)
+        {
+            moveValue.y = moveSpeedModifier * Time.deltaTime;
+            transform.Translate(0, 0, moveValue.y);
+        }
     }
 
     public void UpdateMovement()
@@ -77,7 +94,10 @@ public class PlayerController : MonoBehaviour
 
     void OnJump()
     {
-        playerRigidBody.AddForce(Vector3.up * playerJumpForce, ForceMode.Impulse);
+        if (isGrounded)
+        {
+            playerRigidBody.AddForce(Vector3.up * playerJumpForce, ForceMode.Impulse);
+        }
     }
 
     public void DamagePlayer()
@@ -93,8 +113,23 @@ public class PlayerController : MonoBehaviour
             time = time - tickerTimer;
             currentStamina -= 1;
         }
+        if (currentStamina <= 0)
+        {
+            isDead = true;
+        }
     }
 
-     
+    public void Died()
+    {
+        if (isDead)
+        {
+            isGameOver = true;
+        }
+    }
+
+    public void GroundedCheck()
+    {
+
+    }
 
 }
