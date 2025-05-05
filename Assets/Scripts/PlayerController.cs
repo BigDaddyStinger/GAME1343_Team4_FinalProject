@@ -9,32 +9,39 @@ public class PlayerController : MonoBehaviour
 {
 
     CharacterController playerController;
-    [SerializeField] GameObject playerCamera;
-    [SerializeField] Rigidbody playerRigidBody;
 
+    [SerializeField] GameObject playerCamera;
+
+    [SerializeField] Rigidbody playerRigidBody;
 
     [SerializeField] float playerSpeed = 1.0f;
     [SerializeField] float moveSpeedModifier = 2.0f;
     [SerializeField] float playerJumpForce = 1.0f;
     [SerializeField] float playerLookSensitivityX = 1.0f;
     [SerializeField] float playerLookSensitivityY = 1.0f;
+    [SerializeField] float time = 0.0f;
+    [SerializeField] float tickerTimer = 0.1f;
+    [SerializeField] float groundCheckDistance = 1.0f;
+    [SerializeField] float onLevelCheckDistance = 150.0f;
+    [SerializeField] float onLevelElapsedTime = 0.0f;
+    [SerializeField] float onLevelKillTimer = 0.0f;
+    
     [SerializeField] public int maxStamina;
     [SerializeField] public int currentStamina;
     [SerializeField] public int points;
     [SerializeField] public int maxAmmo;
     [SerializeField] public int currentAmmo;
-    [SerializeField] float time = 0.0f;
-    [SerializeField] float tickerTimer = 0.1f;
+
     [SerializeField] bool isDead;
     [SerializeField] bool isMoving;
     [SerializeField] bool isPaused;
     [SerializeField] bool isGameOver;
     [SerializeField] bool isGrounded;
-    
+    [SerializeField] bool isOnLevel;
+
+    [SerializeField] LayerMask Ground;
 
     Vector2 movementInput;
-    bool grounded;
-    float xRotation;
 
     InputAction playerMovement;
     InputAction playerJump;
@@ -70,6 +77,8 @@ public class PlayerController : MonoBehaviour
     {
         UpdateMovement();
         StaminaTicker();
+        GroundCheck();
+        PlayAreaCheck();
 
         time += Time.deltaTime;
     }
@@ -127,9 +136,39 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public void GroundedCheck()
+    public void GroundCheck()
     {
-
+        
+        if (Physics.Raycast(transform.position, Vector3.down, out RaycastHit hit, groundCheckDistance))
+        {
+            isGrounded = true;
+        }
+        else
+        {
+            isGrounded = false;
+        }
     }
 
+    public void PlayAreaCheck()
+    {
+
+        if (Physics.Raycast(transform.position, Vector3.down, out RaycastHit hit, onLevelCheckDistance))
+        {
+            isOnLevel = true;
+        }
+        else
+        {
+            isOnLevel = false;  
+        }
+        if (!isOnLevel)
+        {
+            onLevelElapsedTime += Time.deltaTime;
+            if (onLevelElapsedTime >= onLevelKillTimer)
+            {
+                isDead = true;
+            }
+        }
+    }
 }
+
+
