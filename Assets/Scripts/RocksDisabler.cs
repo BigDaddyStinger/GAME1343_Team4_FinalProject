@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class RocksDisabler : MonoBehaviour
 {
+    [SerializeField] GameObject rocksSpawner1;
+    [SerializeField] GameObject rocksSpawner2;
     public bool rocksDisabled { get; private set; }
 
     private void Start()
@@ -14,6 +16,8 @@ public class RocksDisabler : MonoBehaviour
         if (other.tag == "Player")
         {
             rocksDisabled = true;
+            rocksSpawner1.SetActive(false);
+            rocksSpawner2.SetActive(false);
         }
     }
 }

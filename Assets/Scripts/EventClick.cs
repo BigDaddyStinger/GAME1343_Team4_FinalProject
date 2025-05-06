@@ -21,6 +21,7 @@ public class EventClick : MonoBehaviour, IPointerDownHandler, IPointerUpHandler,
     public void OnPointerClick(PointerEventData eventData)
     {
         //this.gameObject.SetActive(false);
+        Debug.Log("Clicked");
 
         clickCount++;
         OnClick?.Invoke(clickCount);

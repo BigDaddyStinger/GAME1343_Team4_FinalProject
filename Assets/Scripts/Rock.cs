@@ -23,12 +23,15 @@ public class Rock : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log("Collision");
         if (other.tag == "Player")
         {
             // do damage 
         }
-        else if (other.tag == "Respawn")
+        
+        if (other.tag == "Respawn")
         {
+            Debug.Log("Respawn");
             transform.position = originalPos;
         }
 

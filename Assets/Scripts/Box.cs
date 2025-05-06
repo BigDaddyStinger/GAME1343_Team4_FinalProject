@@ -6,7 +6,7 @@ public class Box : MonoBehaviour
 
     private void Start()
     {
-        eventClick = FindFirstObjectByType<EventClick>();
+        eventClick = this.gameObject.GetComponent<EventClick>();
 
         if (eventClick != null )
         {
