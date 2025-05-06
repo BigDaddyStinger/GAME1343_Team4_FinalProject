@@ -23,7 +23,6 @@ public class Rock : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Collision");
         if (other.tag == "Player")
         {
             // do damage 

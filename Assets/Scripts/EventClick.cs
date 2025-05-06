@@ -4,6 +4,7 @@ using UnityEngine.EventSystems;
 
 public class EventClick : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler
 {
+    int numClicks;
     public Action<int> OnClick { get; internal set; }
 
     public void OnPointerDown(PointerEventData eventData)
@@ -18,7 +19,12 @@ public class EventClick : MonoBehaviour, IPointerDownHandler, IPointerUpHandler,
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        this.gameObject.SetActive(false);
+        numClicks++;
+        if (numClicks == 4)
+        {
+            numClicks = 1;
+        }
+        OnClick?.Invoke(numClicks);
     }
 
     public void OnPointerEnter(PointerEventData eventData)

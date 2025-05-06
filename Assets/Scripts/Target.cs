@@ -23,10 +23,9 @@ public class Target : MonoBehaviour
         if (clicks == 3)
         {
             //add stamina
-            Debug.Log("Clikced 3 times");
+            Debug.Log("Clicked 3 times");
             this.gameObject.transform.GetComponent<MeshRenderer>().enabled = false;
             StartCoroutine(activateTarget());
-           
         }
     }
 
