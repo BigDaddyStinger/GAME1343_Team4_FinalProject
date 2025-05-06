@@ -7,32 +7,34 @@ public class Target : MonoBehaviour
 
     private void Start()
     {
-        StartCoroutine(activateTarget());
-        this.gameObject.SetActive(false);
         eventClick = this.gameObject.GetComponent<EventClick>();
+        this.gameObject.transform.GetComponent<MeshRenderer>().enabled = false;
 
         if (eventClick != null)
         {
             eventClick.OnClick += disableTarget;
         }
+
+        StartCoroutine(activateTarget());
     }
 
     private void disableTarget(int clicks)
     {
         if (clicks == 3)
         {
-            StartCoroutine(activateTarget());
             //add stamina
-            this.gameObject.SetActive(false);
-          
+            Debug.Log("Clikced 3 times");
+            this.gameObject.transform.GetComponent<MeshRenderer>().enabled = false;
+            StartCoroutine(activateTarget());
+           
         }
     }
 
     IEnumerator activateTarget()
     {
         Debug.Log("Started Coroutine");
-        var seconds = Random.Range(8, 15);
+        var seconds = Random.Range(10, 20);
         yield return new WaitForSeconds(seconds);
-        this.gameObject.SetActive(true);
+        this.gameObject.transform.GetComponent<MeshRenderer>().enabled = true;
     }
 }

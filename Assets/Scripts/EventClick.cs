@@ -24,6 +24,10 @@ public class EventClick : MonoBehaviour, IPointerDownHandler, IPointerUpHandler,
         Debug.Log("Clicked");
 
         clickCount++;
+        if (clickCount == 4)
+        {
+            clickCount = 1;
+        }
         OnClick?.Invoke(clickCount);
     }
 
