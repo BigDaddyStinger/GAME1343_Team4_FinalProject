@@ -1,8 +1,11 @@
+using System;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
 public class EventClick : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler
 {
+    public Action<int> OnClick { get; internal set; }
+
     public void OnPointerDown(PointerEventData eventData)
     {
         // Empty
