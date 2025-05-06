@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class StaminaOrb : MonoBehaviour
 {
-    private GameUIManager ui;
-
+    /*private GameUIManager ui;
+    
     void Start()
     {
         ui = FindAnyObjectByType<GameUIManager>();
@@ -17,5 +17,5 @@ public class StaminaOrb : MonoBehaviour
             ui.UpdateStaminaBar();
             Destroy(gameObject); // Remove orb after pickup
         }
-    }
+    }*/
 }

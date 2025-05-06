@@ -4,10 +4,13 @@ using TMPro;
 using System.Collections;
 public class GameUIManager : MonoBehaviour
 {
+    [SerializeField] GameObject healthManager; //
+    Health health; //
+
     [Header("Stamina")]
     public Image staminaFill;
     public float maxStamina = 100f;
-    public float currentStamina;
+    //public float currentStamina;
 
     [Header("Wall Warning Flash")]
     public Image wallWarning;
@@ -24,7 +27,9 @@ public class GameUIManager : MonoBehaviour
 
     void Start()
     {
-        currentStamina = maxStamina;
+        health = healthManager.GetComponent<Health>(); //
+
+        health.currentStamina = maxStamina; //
         UpdateStaminaBar();
         wallWarning.enabled = false;
         actionPrompt.gameObject.SetActive(false);
@@ -36,10 +41,10 @@ public class GameUIManager : MonoBehaviour
         if (isDead) return;
 
         // Debug auto-drain
-        currentStamina -= Time.deltaTime * 5f;
+        //health.currentStamina -= Time.deltaTime * 5f; //
         UpdateStaminaBar();
 
-        if (currentStamina <= 0)
+        if (health.currentStamina <= 0) //
         {
             HandleDeath();
         }
@@ -47,7 +52,7 @@ public class GameUIManager : MonoBehaviour
 
     public void UpdateStaminaBar()
     {
-        float fill = Mathf.Clamp01(currentStamina / maxStamina);
+        float fill = Mathf.Clamp01(health.currentStamina / maxStamina); //
         staminaFill.fillAmount = fill;
         staminaFill.color = Color.Lerp(Color.red, Color.green, fill);
     }

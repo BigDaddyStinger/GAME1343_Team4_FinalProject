@@ -3,9 +3,12 @@ using UnityEngine;
 public class Box : MonoBehaviour
 {
     EventClick eventClick;
+    [SerializeField] GameObject healthManager;
+    Health health;
 
     private void Start()
     {
+        health = healthManager.GetComponent<Health>();
         eventClick = this.gameObject.GetComponent<EventClick>();
 
         if (eventClick != null )
@@ -26,7 +29,8 @@ public class Box : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            //Damage(20);
+            Debug.Log("Dealed Damage");
+            health.DealDamage(10);
         }
         //Instantiate effect at this.gameobject.localposition
     }
