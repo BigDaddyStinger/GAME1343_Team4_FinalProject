@@ -85,6 +85,11 @@ public class PlayerController : MonoBehaviour
         currentStamina -= 5;
     }
 
+    public void HealPlayer()
+    {
+        currentStamina += 5;
+    }
+
     public void StaminaTicker()
     {
         if (isDead) return;
