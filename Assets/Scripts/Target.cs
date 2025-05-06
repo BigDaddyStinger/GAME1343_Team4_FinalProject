@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class Target : MonoBehaviour
 {
@@ -6,7 +7,9 @@ public class Target : MonoBehaviour
 
     private void Start()
     {
-        eventClick = FindFirstObjectByType<EventClick>();
+        StartCoroutine(activateTarget());
+        this.gameObject.SetActive(false);
+        eventClick = this.gameObject.GetComponent<EventClick>();
 
         if (eventClick != null)
         {
@@ -18,9 +21,18 @@ public class Target : MonoBehaviour
     {
         if (clicks == 3)
         {
-            //this.gameObject.SetActive(false);
+            StartCoroutine(activateTarget());
+            //add stamina
+            this.gameObject.SetActive(false);
+          
         }
     }
 
-    //Make Coroutine for reusing Target
+    IEnumerator activateTarget()
+    {
+        Debug.Log("Started Coroutine");
+        var seconds = Random.Range(8, 15);
+        yield return new WaitForSeconds(seconds);
+        this.gameObject.SetActive(true);
+    }
 }
