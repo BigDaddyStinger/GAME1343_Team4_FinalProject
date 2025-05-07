@@ -20,10 +20,10 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float playerSpeed = 1.0f;
     [SerializeField] float moveSpeedModifier = 2.0f;
     [SerializeField] float playerJumpForce = 1.0f;
-    [SerializeField] float playerLookSensitivityX = 1.0f;
-    [SerializeField] float playerLookSensitivityY = 1.0f;
+    //[SerializeField] float playerLookSensitivityX = 1.0f;
+    //[SerializeField] float playerLookSensitivityY = 1.0f;
     [SerializeField] float time = 0.0f;
-    [SerializeField] float tickerTimer = 0.1f;
+    //[SerializeField] float tickerTimer = 0.1f;
     [SerializeField] float groundCheckDistance = 1.0f;
     [SerializeField] float onLevelCheckDistance = 150.0f;
     [SerializeField] float onLevelElapsedTime = 0.0f;
@@ -36,9 +36,10 @@ public class PlayerController : MonoBehaviour
     [SerializeField] public int currentAmmo;
 
     [SerializeField] bool pcIsDead;
-    [SerializeField] bool isMoving;
-    [SerializeField] bool isPaused;
-    [SerializeField] bool isGameOver;
+    [SerializeField] bool pcIsMoving;
+    [SerializeField] bool pcIsPaused;
+    [SerializeField] bool pcIsGameOver;
+    [SerializeField] bool pcIsVictory;
     [SerializeField] bool isGrounded;
     [SerializeField] bool isOnLevel;
 
@@ -52,7 +53,7 @@ public class PlayerController : MonoBehaviour
     InputAction playerSprint;
     InputAction playerLook;
 
-    public event Action OnStatsChanged;
+    //public event Action OnStatsChanged;
 
     public void OnEnable()
     {
@@ -67,15 +68,15 @@ public class PlayerController : MonoBehaviour
         playerJump = InputSystem.actions.FindAction("Jump");
         playerShoot = InputSystem.actions.FindAction("Attack");
         playerSprint = InputSystem.actions.FindAction("Sprint");
-        playerLook = InputSystem.actions.FindAction("Look");
+        //playerLook = InputSystem.actions.FindAction("Look");
 
-        isGameOver = false;
-        isPaused = false;
-        isMoving = false;
+        pcIsGameOver = false;
+        pcIsPaused = false;
+        pcIsMoving = false;
 
         pcIsDead = GameObject.Find("GameUI").GetComponent<GameUIManager>().isDead;
 
-        playerAnimator = GetComponent<Animator>();
+        playerAnimator = GetComponentInChildren<Animator>();
     }
 
     // Update is called once per frame
@@ -93,13 +94,34 @@ public class PlayerController : MonoBehaviour
     {
         Debug.Log("I AM MOVING");
         Vector2 moveValue = playerMovement.ReadValue<Vector2>() * playerSpeed * Time.deltaTime;
+        float magnitude = moveValue.magnitude;
         transform.Translate(moveValue.x, 0, moveValue.y);
 
-        while (moveValue.y == 0)
+        if (moveValue.y == 0)
         {
             moveValue.y = moveSpeedModifier * Time.deltaTime;
             transform.Translate(0, 0, moveValue.y);
         }
+
+        if (magnitude > 0.1f && magnitude < 0.75f && isGrounded)
+        {
+            playerAnimator.SetBool("isWalking", true);
+            playerAnimator.SetBool("isRunning", false);
+        }
+
+        else if (magnitude >= 0.75f && isGrounded)
+        {
+            playerAnimator.SetBool("isWalking", false);
+            playerAnimator.SetBool("isRunning", true);
+        }
+
+        else
+        {
+            playerAnimator.SetBool("isWalking", false);
+            playerAnimator.SetBool("isRunning", false);
+        }
+
+        playerAnimator.SetBool("isJumping", !isGrounded);
     }
 
     public void UpdateMovement()
@@ -112,6 +134,7 @@ public class PlayerController : MonoBehaviour
         if (isGrounded)
         {
             playerRigidBody.AddForce(Vector3.up * playerJumpForce, ForceMode.Impulse);
+            playerAnimator.SetBool("isJumping", true );
         }
     }
 
@@ -149,7 +172,7 @@ public class PlayerController : MonoBehaviour
     {
         if (pcIsDead)
         {
-            isGameOver = true;
+            pcIsGameOver = true;
         }
     }
 
@@ -183,5 +206,10 @@ public class PlayerController : MonoBehaviour
                 pcIsDead = true;
             }
         }
+    }
+
+    public void TriggerVictoryAnimation()
+    {
+        playerAnimator.SetBool("isVictory", true);
     }
 }
