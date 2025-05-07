@@ -33,7 +33,7 @@ public class Target : MonoBehaviour
     IEnumerator activateTarget()
     {
         Debug.Log("Started Coroutine");
-        var seconds = Random.Range(10, 20);
+        var seconds = Random.Range(5, 10);
         yield return new WaitForSeconds(seconds);
         this.gameObject.transform.GetComponent<MeshRenderer>().enabled = true;
     }
