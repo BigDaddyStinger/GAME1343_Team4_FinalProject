@@ -274,6 +274,7 @@ MonoBehaviour:
   actionPrompt: {fileID: 1706167277}
   promptDuration: 1.5
   deathPanel: {fileID: 1410487064}
+  isDead: 0
 --- !u!1 &24252013
 GameObject:
   m_ObjectHideFlags: 0
@@ -3942,6 +3943,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d372ffc28ba21044491211602bbe9a2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healthManager: {fileID: 0}
 --- !u!114 &507186840
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11783,6 +11785,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d372ffc28ba21044491211602bbe9a2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healthManager: {fileID: 0}
 --- !u!114 &1261856015
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13917,7 +13920,7 @@ GameObject:
   - component: {fileID: 1497086270}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17071,6 +17074,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 165235011}
+  resumeButton: {fileID: 0}
+  mainMenuButton: {fileID: 0}
 --- !u!4 &1827921715
 Transform:
   m_ObjectHideFlags: 0
@@ -18847,19 +18852,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerCamera: {fileID: 0}
+  pcGameUIManager: {fileID: 0}
   playerRigidBody: {fileID: 1962660942}
+  playerAnimator: {fileID: 0}
   playerSpeed: 12
+  moveSpeedModifier: 2
   playerJumpForce: 8
-  playerLookSensitivityX: 1
-  playerLookSensitivityY: 1
+  time: 0
+  groundCheckDistance: 1
+  onLevelCheckDistance: 150
+  onLevelElapsedTime: 0
+  onLevelKillTimer: 0
   maxStamina: 100
   currentStamina: 100
   points: 25
   maxAmmo: 100
   currentAmmo: 10
-  time: 0
-  tickerTimer: 1
-  isDead: 0
+  pcIsDead: 0
+  pcIsMoving: 0
+  pcIsPaused: 0
+  pcIsGameOver: 0
+  pcIsVictory: 0
+  isGrounded: 0
+  isOnLevel: 0
+  Ground:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!54 &1962660942
 Rigidbody:
   m_ObjectHideFlags: 0
