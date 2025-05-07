@@ -5,8 +5,10 @@ public class Rock : MonoBehaviour
     RocksDisabler rocksDisabler;
     Vector3 originalPos;
     [SerializeField] float rockSpeed;
+    Health health;
     private void Start()
     {
+        health = FindFirstObjectByType<Health>();
         rocksDisabler = FindAnyObjectByType<RocksDisabler>();
         originalPos = transform.position;
     }
@@ -25,7 +27,7 @@ public class Rock : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            // do damage 
+            health.DealDamage(20);
         }
         
         if (other.tag == "Respawn")
