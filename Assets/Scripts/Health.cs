@@ -19,9 +19,4 @@ public class Health : MonoBehaviour
     {
         currentStamina += stamina;
     }
-
-    //public current health
-
-    //public void DealDamage(float damage)
-    //{current health - damage
 }

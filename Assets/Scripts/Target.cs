@@ -4,9 +4,11 @@ using System.Collections;
 public class Target : MonoBehaviour
 {
     EventClick eventClick;
-
+    [SerializeField] GameObject healthManager;
+    Health health;
     private void Start()
     {
+        health = healthManager.GetComponent<Health>();
         eventClick = this.gameObject.GetComponent<EventClick>();
         this.gameObject.transform.GetComponent<MeshRenderer>().enabled = false;
 
@@ -22,8 +24,7 @@ public class Target : MonoBehaviour
     {
         if (clicks == 3)
         {
-            //add stamina
-            Debug.Log("Clicked 3 times");
+            health.AddStamina(50);
             this.gameObject.transform.GetComponent<MeshRenderer>().enabled = false;
             StartCoroutine(activateTarget());
         }

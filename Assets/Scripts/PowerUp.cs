@@ -6,6 +6,8 @@ public class PowerUp : MonoBehaviour
 {
     [SerializeField] float newMass = .5f;
     [SerializeField] float powerDuration = 3;
+    private float originalMass;
+    
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player")
@@ -16,11 +18,13 @@ public class PowerUp : MonoBehaviour
 
     IEnumerator GravityPowerUp(GameObject player)
     {
-        float mass = player.GetComponent<Rigidbody>().mass;
-        mass = newMass;
+        float mass = player.transform.GetComponent<Rigidbody>().mass;
+        originalMass = mass;
+        player.transform.GetComponent<Rigidbody>().mass = newMass;
 
         yield return new WaitForSeconds(powerDuration);
 
-        mass = 1;
+        player.transform.GetComponent<Rigidbody>().mass = originalMass;
+  
     }
 }

@@ -15,6 +15,7 @@ public class RocksDisabler : MonoBehaviour
     {
         if (other.tag == "Player")
         {
+            Debug.Log("Rocks Disabled");
             rocksDisabled = true;
             rocksSpawner1.SetActive(false);
             rocksSpawner2.SetActive(false);

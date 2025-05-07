@@ -418,7 +418,7 @@ GameObject:
   - component: {fileID: 669364100}
   - component: {fileID: 669364099}
   m_Layer: 5
-  m_Name: QuitButton
+  m_Name: MainMenuButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -490,7 +490,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1642540868}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
-        m_MethodName: QuitGame
+        m_MethodName: LoadMainMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1604,7 +1604,7 @@ GameObject:
   - component: {fileID: 1304055686}
   - component: {fileID: 1304055685}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: MainMenuText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1649,7 +1649,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Quit
+  m_text: Main Menu
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2106,6 +2106,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 899779848}
+  resumeButton: {fileID: 0}
+  mainMenuButton: {fileID: 0}
 --- !u!4 &1642540869
 Transform:
   m_ObjectHideFlags: 0
@@ -2429,14 +2431,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0869a561b1ebbb48b55c5cc5ba4756c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healthManager: {fileID: 0}
   staminaFill: {fileID: 761306933}
   maxStamina: 100
-  currentStamina: 100
   wallWarning: {fileID: 632955154}
   wallFlashDuration: 0.3
   actionPrompt: {fileID: 997510293}
   promptDuration: 1.5
   deathPanel: {fileID: 927135152}
+  isDead: 0
 --- !u!4 &1968988110
 Transform:
   m_ObjectHideFlags: 0
