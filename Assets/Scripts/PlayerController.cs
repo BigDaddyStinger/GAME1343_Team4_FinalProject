@@ -4,13 +4,17 @@ using UnityEngine.InputSystem.Utilities;
 using TMPro;
 using System;
 using System.Collections;
+using Unity.VisualScripting;
 
 public class PlayerController : MonoBehaviour
 {
 
     CharacterController playerController;
+
     [SerializeField] GameObject playerCamera;
+    [SerializeField] GameObject pcGameUIManager;
     [SerializeField] Rigidbody playerRigidBody;
+    [SerializeField] Animator playerAnimator;
 
 
     [SerializeField] float playerSpeed = 1.0f;
@@ -31,7 +35,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] public int maxAmmo;
     [SerializeField] public int currentAmmo;
 
-    [SerializeField] bool isDead;
+    [SerializeField] bool pcIsDead;
     [SerializeField] bool isMoving;
     [SerializeField] bool isPaused;
     [SerializeField] bool isGameOver;
@@ -66,16 +70,19 @@ public class PlayerController : MonoBehaviour
         playerLook = InputSystem.actions.FindAction("Look");
 
         isGameOver = false;
-        isDead = false;
         isPaused = false;
         isMoving = false;
+
+        pcIsDead = GameObject.Find("GameUI").GetComponent<GameUIManager>().isDead;
+
+        playerAnimator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     public void Update()
     {
         UpdateMovement();
-        StaminaTicker();
+       // StaminaTicker();
         GroundCheck();
         PlayAreaCheck();
 
@@ -108,7 +115,9 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public void DamagePlayer()
+    // Old gain and decreese stamina for temp ui
+   /*
+    * public void DamagePlayer()
     {
         currentStamina -= 5;
     }
@@ -117,10 +126,13 @@ public class PlayerController : MonoBehaviour
     {
         currentStamina += 5;
     }
+   */
 
-    public void StaminaTicker()
+    // Old Ticker for temp ui
+    /*
+     * public void StaminaTicker()
     {
-        if (isDead) return;
+        if (pcIsDead) return;
         if (time >= tickerTimer)
         {
             time = time - tickerTimer;
@@ -128,13 +140,14 @@ public class PlayerController : MonoBehaviour
         }
         if (currentStamina <= 0)
         {
-            isDead = true;
+            pcIsDead = true;
         }
     }
+    */
 
     public void Died()
     {
-        if (isDead)
+        if (pcIsDead)
         {
             isGameOver = true;
         }
@@ -167,7 +180,7 @@ public class PlayerController : MonoBehaviour
             onLevelElapsedTime += Time.deltaTime;
             if (onLevelElapsedTime >= onLevelKillTimer)
             {
-                isDead = true;
+                pcIsDead = true;
             }
         }
     }

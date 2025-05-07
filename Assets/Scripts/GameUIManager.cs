@@ -23,7 +23,7 @@ public class GameUIManager : MonoBehaviour
     [Header("Death Screen")]
     public GameObject deathPanel;
 
-    private bool isDead = false;
+    public bool isDead = false;
 
     void Start()
     {
