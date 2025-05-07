@@ -28,6 +28,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float onLevelCheckDistance = 150.0f;
     [SerializeField] float onLevelElapsedTime = 0.0f;
     [SerializeField] float onLevelKillTimer = 0.0f;
+    [SerializeField] float triggerElapsedTime = 0.0f;
+    [SerializeField] float triggerResetTimeAmmount = 0.5f;
 
     [SerializeField] public int maxStamina;
     [SerializeField] public int currentStamina;
@@ -92,7 +94,7 @@ public class PlayerController : MonoBehaviour
 
     public void OnMove()
     {
-        Debug.Log("I AM MOVING");
+        //Debug.Log("I AM MOVING");
         Vector2 moveValue = playerMovement.ReadValue<Vector2>() * playerSpeed * Time.deltaTime;
         float magnitude = moveValue.magnitude;
         transform.Translate(moveValue.x, 0, moveValue.y);
@@ -103,13 +105,13 @@ public class PlayerController : MonoBehaviour
             transform.Translate(0, 0, moveValue.y);
         }
 
-        if (magnitude > 0.1f && magnitude < 0.75f && isGrounded)
+        if (magnitude >= 0.0f && magnitude < 0.01f && isGrounded)
         {
             playerAnimator.SetBool("isWalking", true);
             playerAnimator.SetBool("isRunning", false);
         }
 
-        else if (magnitude >= 0.75f && isGrounded)
+        else if (magnitude >= 0.01f && isGrounded)
         {
             playerAnimator.SetBool("isWalking", false);
             playerAnimator.SetBool("isRunning", true);
@@ -120,8 +122,6 @@ public class PlayerController : MonoBehaviour
             playerAnimator.SetBool("isWalking", false);
             playerAnimator.SetBool("isRunning", false);
         }
-
-        playerAnimator.SetBool("isJumping", !isGrounded);
     }
 
     public void UpdateMovement()
@@ -134,7 +134,7 @@ public class PlayerController : MonoBehaviour
         if (isGrounded)
         {
             playerRigidBody.AddForce(Vector3.up * playerJumpForce, ForceMode.Impulse);
-            playerAnimator.SetBool("isJumping", true );
+            playerAnimator.SetTrigger("isJumping");
         }
     }
 
@@ -145,6 +145,7 @@ public class PlayerController : MonoBehaviour
         currentStamina -= 5;
     }
 
+    public void HealPlayer()
     public void HealPlayer()
     {
         currentStamina += 5;
@@ -204,6 +205,18 @@ public class PlayerController : MonoBehaviour
             if (onLevelElapsedTime >= onLevelKillTimer)
             {
                 pcIsDead = true;
+            }
+        }
+    }
+
+    public void JumpTriggerReset()
+    {
+        if (!isGrounded)
+        {
+            triggerElapsedTime += Time.deltaTime;
+            if (triggerElapsedTime >= triggerResetTimeAmmount)
+            {
+                playerAnimator.ResetTrigger("isJumping");
             }
         }
     }
