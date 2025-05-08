@@ -6,6 +6,7 @@ public class Target : MonoBehaviour
     EventClick eventClick;
     [SerializeField] GameObject healthManager;
     Health health;
+    [SerializeField] GameObject staminaVFX;
     private void Start()
     {
         health = healthManager.GetComponent<Health>();
@@ -26,6 +27,7 @@ public class Target : MonoBehaviour
         {
             Debug.Log("Clicked 3 times");
             health.AddStamina(50);
+            Instantiate(staminaVFX, transform.position, Quaternion.identity);
             this.gameObject.transform.GetComponent<MeshRenderer>().enabled = false;
             StartCoroutine(activateTarget());
         }
