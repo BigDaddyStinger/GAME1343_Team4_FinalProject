@@ -56,6 +56,7 @@ public class GameUIManager : MonoBehaviour
         staminaFill.color = Color.Lerp(Color.red, Color.green, fill);
     }
 
+    //Don't need anymore, but leaving in so nothing breaks lol
     public void ShowActionPrompt(string message)
     {
         StartCoroutine(PromptRoutine(message));
