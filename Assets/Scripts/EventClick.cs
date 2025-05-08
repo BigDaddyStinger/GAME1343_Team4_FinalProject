@@ -24,6 +24,7 @@ public class EventClick : MonoBehaviour, IPointerDownHandler, IPointerUpHandler,
         {
             numClicks = 1;
         }
+        Debug.Log("numClicks: " + numClicks);
         OnClick?.Invoke(numClicks);
     }
 
