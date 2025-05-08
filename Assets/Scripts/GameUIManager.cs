@@ -12,10 +12,6 @@ public class GameUIManager : MonoBehaviour
     public float maxStamina = 100f;
     //public float currentStamina;
 
-    [Header("Wall Warning Flash")]
-    public Image wallWarning;
-    public float wallFlashDuration = 0.3f;
-
     [Header("Action Prompt")]
     public TextMeshProUGUI actionPrompt;
     public float promptDuration = 1.5f;
@@ -25,8 +21,11 @@ public class GameUIManager : MonoBehaviour
 
     public bool isDead = false;
 
+    [SerializeField] AudioSource audioSource;
+
     void Start()
     {
+        //audioSource = GetComponent<AudioSource>();  
         health = healthManager.GetComponent<Health>(); //
 
         health.currentStamina = maxStamina; //
@@ -57,18 +56,6 @@ public class GameUIManager : MonoBehaviour
         staminaFill.color = Color.Lerp(Color.red, Color.green, fill);
     }
 
-    public void TriggerWallWarning()
-    {
-        StartCoroutine(FlashWallWarning());
-    }
-
-    private IEnumerator FlashWallWarning()
-    {
-        wallWarning.enabled = true;
-        yield return new WaitForSeconds(wallFlashDuration);
-        wallWarning.enabled = false;
-    }
-
     public void ShowActionPrompt(string message)
     {
         StartCoroutine(PromptRoutine(message));
@@ -87,7 +74,7 @@ public class GameUIManager : MonoBehaviour
         isDead = true;
         deathPanel.SetActive(true);
         Time.timeScale = 0f; // Freeze game
-
+        audioSource.Play(0);
     }
 
     public void RetryLevel()
