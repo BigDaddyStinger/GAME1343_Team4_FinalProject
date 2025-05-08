@@ -18,5 +18,10 @@ public class Health : MonoBehaviour
     public void AddStamina(float stamina)
     {
         currentStamina += stamina;
+        if (currentStamina > 100f)
+        {
+            currentStamina = 100f;
+        }
+        Debug.Log("Current stamina: " +  currentStamina);
     }
 }

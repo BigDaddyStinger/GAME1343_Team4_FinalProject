@@ -5,6 +5,7 @@ public class Box : MonoBehaviour
     EventClick eventClick;
     [SerializeField] GameObject healthManager;
     Health health;
+    [SerializeField] GameObject destroyedBoxVFX;
 
     private void Start()
     {
@@ -21,6 +22,7 @@ public class Box : MonoBehaviour
     {
         if (clicks == 1)
         {
+            Instantiate(destroyedBoxVFX, transform.position, Quaternion.identity);
             this.gameObject.SetActive(false);
         }
     }
