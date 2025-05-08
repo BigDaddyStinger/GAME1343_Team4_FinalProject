@@ -30,6 +30,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float onLevelKillTimer = 0.0f;
     [SerializeField] float triggerElapsedTime = 0.0f;
     [SerializeField] float triggerResetTimeAmmount = 0.5f;
+    [SerializeField] float deathBoolResetTimer = 1.0f;
+    [SerializeField] float deathBoolResetElapsedTime = 1.0f;
 
     [SerializeField] public int maxStamina;
     [SerializeField] public int currentStamina;
@@ -76,7 +78,7 @@ public class PlayerController : MonoBehaviour
         pcIsPaused = false;
         pcIsMoving = false;
 
-        pcIsDead = GameObject.Find("GameUI").GetComponent<GameUIManager>().isDead;
+
 
         playerAnimator = GetComponentInChildren<Animator>();
     }
@@ -88,39 +90,48 @@ public class PlayerController : MonoBehaviour
        // StaminaTicker();
         GroundCheck();
         PlayAreaCheck();
+        TriggerDeathAnimation();
 
         time += Time.deltaTime;
+        pcIsDead = GameObject.Find("GameUI").GetComponent<GameUIManager>().isDead;
     }
 
     public void OnMove()
     {
-        //Debug.Log("I AM MOVING");
-        Vector2 moveValue = playerMovement.ReadValue<Vector2>() * playerSpeed * Time.deltaTime;
-        float magnitude = moveValue.magnitude;
-        transform.Translate(moveValue.x, 0, moveValue.y);
-
-        if (moveValue.y == 0)
+        if (pcIsDead)
         {
-            moveValue.y = moveSpeedModifier * Time.deltaTime;
-            transform.Translate(0, 0, moveValue.y);
+            return;
         }
-
-        if (magnitude >= 0.0f && magnitude < 0.01f && isGrounded)
+        if (!pcIsDead)
         {
-            playerAnimator.SetBool("isWalking", true);
-            playerAnimator.SetBool("isRunning", false);
-        }
+            //Debug.Log("I AM MOVING");
+            Vector2 moveValue = playerMovement.ReadValue<Vector2>() * playerSpeed * Time.deltaTime;
+            float magnitude = moveValue.magnitude;
+            transform.Translate(moveValue.x, 0, moveValue.y);
 
-        else if (magnitude >= 0.01f && isGrounded)
-        {
-            playerAnimator.SetBool("isWalking", false);
-            playerAnimator.SetBool("isRunning", true);
-        }
+            if (moveValue.y == 0)
+            {
+                moveValue.y = moveSpeedModifier * Time.deltaTime;
+                transform.Translate(0, 0, moveValue.y);
+            }
 
-        else
-        {
-            playerAnimator.SetBool("isWalking", false);
-            playerAnimator.SetBool("isRunning", false);
+            if (magnitude >= 0.0f && magnitude < 0.01f && isGrounded)
+            {
+                playerAnimator.SetBool("isWalking", true);
+                playerAnimator.SetBool("isRunning", false);
+            }
+
+            else if (magnitude >= 0.01f && isGrounded)
+            {
+                playerAnimator.SetBool("isWalking", false);
+                playerAnimator.SetBool("isRunning", true);
+            }
+
+            else
+            {
+                playerAnimator.SetBool("isWalking", false);
+                playerAnimator.SetBool("isRunning", false);
+            }
         }
     }
 
@@ -224,5 +235,22 @@ public class PlayerController : MonoBehaviour
     public void TriggerVictoryAnimation()
     {
         playerAnimator.SetBool("isVictory", true);
+    }
+
+    public void TriggerDeathAnimation()
+    {
+        if(!pcIsDead)
+        {
+            return;
+        }
+        if (pcIsDead)
+        {
+            playerAnimator.SetBool("isDead", true);
+            deathBoolResetElapsedTime += Time.deltaTime;
+        }
+        if (deathBoolResetElapsedTime > deathBoolResetTimer)
+        {
+            playerAnimator.SetBool("isDead", false);
+        }
     }
 }
