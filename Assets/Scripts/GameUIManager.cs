@@ -31,7 +31,7 @@ public class GameUIManager : MonoBehaviour
 
         health.currentStamina = maxStamina; //
         UpdateStaminaBar();
-        wallWarning.enabled = false;
+        //wallWarning.enabled = false;
         actionPrompt.gameObject.SetActive(false);
         deathPanel.SetActive(false);
     }
@@ -87,6 +87,7 @@ public class GameUIManager : MonoBehaviour
         isDead = true;
         deathPanel.SetActive(true);
         Time.timeScale = 0f; // Freeze game
+
     }
 
     public void RetryLevel()
