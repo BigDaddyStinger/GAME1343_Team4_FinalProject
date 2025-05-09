@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using System.Collections;
+using UnityEngine.Events;
 public class GameUIManager : MonoBehaviour
 {
     [SerializeField] GameObject healthManager; //
@@ -21,7 +22,7 @@ public class GameUIManager : MonoBehaviour
 
     public bool isDead = false;
 
-    [SerializeField] AudioSource audioSource;
+    public UnityEvent OnDeath;
 
     void Start()
     {
@@ -72,6 +73,7 @@ public class GameUIManager : MonoBehaviour
 
     public void HandleDeath()
     {
+        OnDeath?.Invoke();
         isDead = true;
         deathPanel.SetActive(true);
         Time.timeScale = .5f; // Freeze game //turned down for death screen

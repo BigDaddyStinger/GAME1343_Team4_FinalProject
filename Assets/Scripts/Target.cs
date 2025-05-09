@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.Events;
 
 public class Target : MonoBehaviour
 {
@@ -7,6 +8,7 @@ public class Target : MonoBehaviour
     [SerializeField] GameObject healthManager;
     Health health;
     [SerializeField] GameObject staminaVFX;
+    public UnityEvent OnGainStamina;
     private void Start()
     {
         health = healthManager.GetComponent<Health>();
@@ -25,7 +27,7 @@ public class Target : MonoBehaviour
     {
         if (clicks == 3)
         {
-            Debug.Log("Clicked 3 times");
+            OnGainStamina?.Invoke();
             health.AddStamina(50);
             Instantiate(staminaVFX, transform.position, Quaternion.identity);
             this.gameObject.transform.GetComponent<MeshRenderer>().enabled = false;
