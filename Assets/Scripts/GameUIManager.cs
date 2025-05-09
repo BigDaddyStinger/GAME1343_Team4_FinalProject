@@ -74,8 +74,7 @@ public class GameUIManager : MonoBehaviour
     {
         isDead = true;
         deathPanel.SetActive(true);
-        Time.timeScale = 0f; // Freeze game
-        audioSource.Play(0);
+        Time.timeScale = .5f; // Freeze game //turned down for death screen
     }
 
     public void RetryLevel()

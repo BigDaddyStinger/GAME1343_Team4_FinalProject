@@ -20,7 +20,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float playerSpeed = 1.0f;
     [SerializeField] float moveSpeedModifier = 2.0f;
     [SerializeField] float playerJumpForce = 1.0f;
-    [SerializeField] float blockerBounceForce = 1.0f;
+    //[SerializeField] float blockerBounceForce = 1.0f;
     //[SerializeField] float playerLookSensitivityX = 1.0f;
     //[SerializeField] float playerLookSensitivityY = 1.0f;
     [SerializeField] float time = 0.0f;
@@ -31,7 +31,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float onLevelKillTimer = 0.0f;
     [SerializeField] float triggerElapsedTime = 0.0f;
     [SerializeField] float triggerResetTimeAmmount = 0.5f;
-    [SerializeField] float deathBoolResetTimer = 1.0f;
+    //[SerializeField] float deathBoolResetTimer = 1.0f;
     [SerializeField] float deathBoolResetElapsedTime = 1.0f;
 
     [SerializeField] public int maxStamina;
@@ -41,9 +41,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField] public int currentAmmo;
 
     [SerializeField] bool pcIsDead;
-    [SerializeField] bool pcIsMoving;
-    [SerializeField] bool pcIsPaused;
-    [SerializeField] bool pcIsGameOver;
+    //[SerializeField] bool pcIsMoving;
+    //[SerializeField] bool pcIsPaused;
+    //[SerializeField] bool pcIsGameOver;
     [SerializeField] bool pcIsVictory;
     [SerializeField] bool isGrounded;
     [SerializeField] bool isOnLevel;
@@ -62,6 +62,9 @@ public class PlayerController : MonoBehaviour
     InputAction playerSprint;
     InputAction playerLook;
 
+    [SerializeField] GameUIManager gameUIManager;
+    [SerializeField] Health health;
+
     //public event Action OnStatsChanged;
 
     public void OnEnable()
@@ -79,11 +82,13 @@ public class PlayerController : MonoBehaviour
         playerSprint = InputSystem.actions.FindAction("Sprint");
         //playerLook = InputSystem.actions.FindAction("Look");
 
-        pcIsGameOver = false;
-        pcIsPaused = false;
-        pcIsMoving = false;
+        //pcIsGameOver = false;
+        //pcIsPaused = false;
+        //pcIsMoving = false;
 
+        gameUIManager = GameObject.Find("GameUI").GetComponent<GameUIManager>();
 
+        pcIsDead = false;
 
         playerAnimator = GetComponentInChildren<Animator>();
     }
@@ -94,8 +99,9 @@ public class PlayerController : MonoBehaviour
         UpdateMovement();
        // StaminaTicker();
         GroundCheck();
-        PlayAreaCheck();
         TriggerDeathAnimation();
+        pcIsDead = gameUIManager.isDead;
+
 
         time += Time.deltaTime;
         pcIsDead = GameObject.Find("GameUI").GetComponent<GameUIManager>().isDead;
@@ -189,7 +195,7 @@ public class PlayerController : MonoBehaviour
     {
         if (pcIsDead)
         {
-            pcIsGameOver = true;
+            //pcIsGameOver = true;
         }
     }
 
@@ -205,25 +211,15 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public void PlayAreaCheck()
+    public void OnTriggerEnter(Collider other)
     {
-        if (Physics.Raycast(transform.position, Vector3.down, out RaycastHit hit, onLevelCheckDistance))
+        if (other.tag == "FallBox")
         {
-            isOnLevel = true;
-        }
-        else
-        {
-            isOnLevel = false;
-        }
-        if (!isOnLevel)
-        {
-            onLevelElapsedTime += Time.deltaTime;
-            if (onLevelElapsedTime >= onLevelKillTimer)
-            {
-                pcIsDead = true;
-            }
+            Debug.Log("Dealed Damage");
+            health.DealDamage(100f);
         }
     }
+
 
     public void JumpTriggerReset()
     {
@@ -253,10 +249,7 @@ public class PlayerController : MonoBehaviour
             playerAnimator.SetBool("isDead", true);
             deathBoolResetElapsedTime += Time.deltaTime;
         }
-        if (deathBoolResetElapsedTime > deathBoolResetTimer)
-        {
-            playerAnimator.SetBool("isDead", false);
-        }
+
     }
 
 }
