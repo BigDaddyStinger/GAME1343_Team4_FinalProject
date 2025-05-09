@@ -17819,7 +17819,6 @@ MonoBehaviour:
   onLevelKillTimer: 0
   triggerElapsedTime: 0
   triggerResetTimeAmmount: 0.5
-  deathBoolResetTimer: 1
   deathBoolResetElapsedTime: 1
   maxStamina: 100
   currentStamina: 100
@@ -17827,15 +17826,16 @@ MonoBehaviour:
   maxAmmo: 100
   currentAmmo: 10
   pcIsDead: 0
-  pcIsMoving: 0
-  pcIsPaused: 0
-  pcIsGameOver: 0
   pcIsVictory: 0
   isGrounded: 0
   isOnLevel: 0
+  stopLateralLeftMovement: 0
+  stopLateralRightMovement: 0
   Ground:
     serializedVersion: 2
     m_Bits: 8
+  gameUIManager: {fileID: 0}
+  health: {fileID: 0}
 --- !u!54 &1962660942
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -19002,8 +19002,6 @@ MonoBehaviour:
   healthManager: {fileID: 702881795}
   staminaFill: {fileID: 231471315}
   maxStamina: 100
-  wallWarning: {fileID: 0}
-  wallFlashDuration: 0.3
   actionPrompt: {fileID: 728347149}
   promptDuration: 1.5
   deathPanel: {fileID: 1740873272}
