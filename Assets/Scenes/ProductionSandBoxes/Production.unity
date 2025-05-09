@@ -238,6 +238,34 @@ PrefabInstance:
       propertyPath: destroyedBoxVFX
       value: 
       objectReference: {fileID: 1928308281132484066, guid: 21e0524288bc31549beb7941bd52d894, type: 3}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 784323943}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BoxDestroyedSound
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SoundEffectsManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2559810838395413726, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.9099998
@@ -1045,92 +1073,6 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
---- !u!1001 &168388143
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 355428441}
-    m_Modifications:
-    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
-      propertyPath: healthManager
-      value: 
-      objectReference: {fileID: 702881795}
-    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
-      propertyPath: destroyedBoxVFX
-      value: 
-      objectReference: {fileID: 1928308281132484066, guid: 21e0524288bc31549beb7941bd52d894, type: 3}
-    - target: {fileID: 2559810838395413726, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 2.54642
-      objectReference: {fileID: 0}
-    - target: {fileID: 2559810838395413726, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 2.0690827
-      objectReference: {fileID: 0}
-    - target: {fileID: 2559810838395413726, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 2.0690827
-      objectReference: {fileID: 0}
-    - target: {fileID: 2559810838395413726, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.34000015
-      objectReference: {fileID: 0}
-    - target: {fileID: 2559810838395413726, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 113.16997
-      objectReference: {fileID: 0}
-    - target: {fileID: 2559810838395413726, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -66.089935
-      objectReference: {fileID: 0}
-    - target: {fileID: 2559810838395413726, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2559810838395413726, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2559810838395413726, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2559810838395413726, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2559810838395413726, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2559810838395413726, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2559810838395413726, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5129442236857904303, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
-      propertyPath: m_Name
-      value: Box_02 (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 5129442236857904303, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
---- !u!4 &168388144 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2559810838395413726, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
-  m_PrefabInstance: {fileID: 168388143}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &191270599
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1487,6 +1429,34 @@ PrefabInstance:
       propertyPath: destroyedBoxVFX
       value: 
       objectReference: {fileID: 1928308281132484066, guid: 21e0524288bc31549beb7941bd52d894, type: 3}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 784323943}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BoxDestroyedSound
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SoundEffectsManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2559810838395413726, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
       propertyPath: m_LocalScale.x
       value: 2.54642
@@ -1965,6 +1935,34 @@ PrefabInstance:
       propertyPath: destroyedBoxVFX
       value: 
       objectReference: {fileID: 1928308281132484066, guid: 21e0524288bc31549beb7941bd52d894, type: 3}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 784323943}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BoxDestroyedSound
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SoundEffectsManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2559810838395413726, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
       propertyPath: m_LocalScale.x
       value: 2.54642
@@ -2438,10 +2436,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -2701,7 +2699,6 @@ Transform:
   - {fileID: 1755558273}
   - {fileID: 1649150897}
   - {fileID: 1841330258}
-  - {fileID: 168388144}
   - {fileID: 1257771963}
   - {fileID: 2112769461}
   - {fileID: 1428570383}
@@ -2847,6 +2844,34 @@ PrefabInstance:
       propertyPath: destroyedBoxVFX
       value: 
       objectReference: {fileID: 1928308281132484066, guid: 21e0524288bc31549beb7941bd52d894, type: 3}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 784323943}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BoxDestroyedSound
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SoundEffectsManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2559810838395413726, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
       propertyPath: m_LocalScale.x
       value: 2.54642
@@ -3112,6 +3137,34 @@ PrefabInstance:
       propertyPath: destroyedBoxVFX
       value: 
       objectReference: {fileID: 1928308281132484066, guid: 21e0524288bc31549beb7941bd52d894, type: 3}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 784323943}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BoxDestroyedSound
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SoundEffectsManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2559810838395413726, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
       propertyPath: m_LocalScale.x
       value: 2.54642
@@ -3828,6 +3881,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthManager: {fileID: 702881795}
   staminaVFX: {fileID: 7281369305640630802, guid: b617f3a01ffc85d448023ead4be64914, type: 3}
+  OnGainStamina:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 784323943}
+        m_TargetAssemblyTypeName: SoundEffectsManager, Assembly-CSharp
+        m_MethodName: StaminaSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &507186840
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5159,6 +5227,34 @@ PrefabInstance:
       propertyPath: destroyedBoxVFX
       value: 
       objectReference: {fileID: 1928308281132484066, guid: 21e0524288bc31549beb7941bd52d894, type: 3}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 784323943}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BoxDestroyedSound
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SoundEffectsManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2559810838395413726, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
       propertyPath: m_LocalScale.x
       value: 2.54642
@@ -5451,6 +5547,34 @@ PrefabInstance:
       propertyPath: destroyedBoxVFX
       value: 
       objectReference: {fileID: 1928308281132484066, guid: 21e0524288bc31549beb7941bd52d894, type: 3}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 784323943}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BoxDestroyedSound
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SoundEffectsManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2559810838395413726, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
       propertyPath: m_LocalScale.x
       value: 2.54642
@@ -5537,6 +5661,34 @@ PrefabInstance:
       propertyPath: destroyedBoxVFX
       value: 
       objectReference: {fileID: 1928308281132484066, guid: 21e0524288bc31549beb7941bd52d894, type: 3}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 784323943}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BoxDestroyedSound
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SoundEffectsManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2559810838395413726, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
       propertyPath: m_LocalScale.x
       value: 2.54642
@@ -6178,6 +6330,34 @@ PrefabInstance:
       propertyPath: destroyedBoxVFX
       value: 
       objectReference: {fileID: 1928308281132484066, guid: 21e0524288bc31549beb7941bd52d894, type: 3}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 784323943}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BoxDestroyedSound
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SoundEffectsManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2559810838395413726, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
       propertyPath: m_LocalScale.x
       value: 2.54642
@@ -6264,6 +6444,34 @@ PrefabInstance:
       propertyPath: destroyedBoxVFX
       value: 
       objectReference: {fileID: 1928308281132484066, guid: 21e0524288bc31549beb7941bd52d894, type: 3}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 784323943}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BoxDestroyedSound
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SoundEffectsManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2559810838395413726, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
       propertyPath: m_LocalScale.x
       value: 2.54642
@@ -6980,6 +7188,34 @@ PrefabInstance:
       propertyPath: destroyedBoxVFX
       value: 
       objectReference: {fileID: 1928308281132484066, guid: 21e0524288bc31549beb7941bd52d894, type: 3}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 784323943}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BoxDestroyedSound
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SoundEffectsManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2559810838395413726, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
       propertyPath: m_LocalScale.x
       value: 2.54642
@@ -7233,6 +7469,34 @@ PrefabInstance:
       propertyPath: destroyedBoxVFX
       value: 
       objectReference: {fileID: 1928308281132484066, guid: 21e0524288bc31549beb7941bd52d894, type: 3}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 784323943}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BoxDestroyedSound
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SoundEffectsManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2559810838395413726, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
       propertyPath: m_LocalScale.x
       value: 2.54642
@@ -7888,6 +8152,154 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 748957450}
   m_CullTransparentMesh: 1
+--- !u!1 &784323941
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 784323944}
+  - component: {fileID: 784323943}
+  - component: {fileID: 784323942}
+  m_Layer: 0
+  m_Name: SoundEffectsManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &784323942
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 784323941}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &784323943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 784323941}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f914f451afd919e49a94759e8b937cd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainMusic: {fileID: 1363054273}
+  audioSource: {fileID: 784323942}
+  boxDestroyedSound: {fileID: 8300000, guid: 9c6c04e259f25d94c881b525faa02226, type: 3}
+  gainedStaminaSound: {fileID: 8300000, guid: e932493bc03f819488c675c6474e4268, type: 3}
+  losingSound: {fileID: 8300000, guid: a427354210d26ab47b7a2a6c223c72c9, type: 3}
+  powerUpSound: {fileID: 8300000, guid: 0e68584621e316a4687e2ed88f956a03, type: 3}
+--- !u!4 &784323944
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 784323941}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 869.6196, y: 597.70575, z: -806.526}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &798337910
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8118,6 +8530,34 @@ PrefabInstance:
       propertyPath: destroyedBoxVFX
       value: 
       objectReference: {fileID: 1928308281132484066, guid: 21e0524288bc31549beb7941bd52d894, type: 3}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 784323943}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BoxDestroyedSound
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SoundEffectsManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2559810838395413726, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
       propertyPath: m_LocalScale.x
       value: 2.54642
@@ -8414,6 +8854,34 @@ PrefabInstance:
       propertyPath: destroyedBoxVFX
       value: 
       objectReference: {fileID: 1928308281132484066, guid: 21e0524288bc31549beb7941bd52d894, type: 3}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 784323943}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BoxDestroyedSound
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SoundEffectsManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2559810838395413726, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
       propertyPath: m_LocalScale.x
       value: 2.54642
@@ -8514,6 +8982,34 @@ PrefabInstance:
       propertyPath: destroyedBoxVFX
       value: 
       objectReference: {fileID: 1928308281132484066, guid: 21e0524288bc31549beb7941bd52d894, type: 3}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 784323943}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BoxDestroyedSound
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SoundEffectsManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2559810838395413726, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
       propertyPath: m_LocalScale.x
       value: 2.54642
@@ -8600,6 +9096,34 @@ PrefabInstance:
       propertyPath: destroyedBoxVFX
       value: 
       objectReference: {fileID: 1928308281132484066, guid: 21e0524288bc31549beb7941bd52d894, type: 3}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 784323943}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BoxDestroyedSound
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SoundEffectsManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2559810838395413726, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
       propertyPath: m_LocalScale.x
       value: 2.54642
@@ -9084,6 +9608,34 @@ PrefabInstance:
       propertyPath: destroyedBoxVFX
       value: 
       objectReference: {fileID: 1928308281132484066, guid: 21e0524288bc31549beb7941bd52d894, type: 3}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 784323943}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BoxDestroyedSound
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SoundEffectsManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2559810838395413726, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
       propertyPath: m_LocalScale.x
       value: 2.54642
@@ -9360,6 +9912,108 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 4, y: 4.000001, z: 0.19397187}
   m_Center: {x: 0, y: 1.9999697, z: 0.0969851}
+--- !u!1 &996409789
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 996409790}
+  - component: {fileID: 996409793}
+  - component: {fileID: 996409792}
+  - component: {fileID: 996409791}
+  m_Layer: 0
+  m_Name: JumpPrompt
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &996409790
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 996409789}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1958480931}
+  m_Father: {fileID: 1103572825}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
+--- !u!114 &996409791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 996409789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &996409792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 996409789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 1
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 1920, y: 1080}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0
+--- !u!223 &996409793
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 996409789}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 0
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
+  m_AdditionalShaderChannelsFlag: 25
+  m_UpdateRectTransformForStandalone: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
 --- !u!1001 &1003809745
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9376,6 +10030,34 @@ PrefabInstance:
       propertyPath: destroyedBoxVFX
       value: 
       objectReference: {fileID: 1928308281132484066, guid: 21e0524288bc31549beb7941bd52d894, type: 3}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 784323943}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BoxDestroyedSound
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SoundEffectsManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2559810838395413726, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
       propertyPath: m_LocalScale.x
       value: 2.54642
@@ -9668,6 +10350,34 @@ PrefabInstance:
       propertyPath: destroyedBoxVFX
       value: 
       objectReference: {fileID: 1928308281132484066, guid: 21e0524288bc31549beb7941bd52d894, type: 3}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 784323943}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BoxDestroyedSound
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SoundEffectsManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2559810838395413726, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
       propertyPath: m_LocalScale.x
       value: 2.54642
@@ -9875,7 +10585,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 34.256523, y: -55.8127, z: 121.623215}
-  m_LocalScale: {x: 15.880001, y: 15.880001, z: 2.0947309}
+  m_LocalScale: {x: 15.880001, y: 15.880001, z: 0.24208805}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2056229542}
@@ -10565,6 +11275,34 @@ PrefabInstance:
       propertyPath: destroyedBoxVFX
       value: 
       objectReference: {fileID: 1928308281132484066, guid: 21e0524288bc31549beb7941bd52d894, type: 3}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 784323943}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BoxDestroyedSound
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SoundEffectsManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2559810838395413726, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
       propertyPath: m_LocalScale.x
       value: 2.54642
@@ -10784,6 +11522,7 @@ Transform:
   - {fileID: 2138935672}
   - {fileID: 1621285336}
   - {fileID: 278763568}
+  - {fileID: 996409790}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1121160637
@@ -10905,6 +11644,34 @@ PrefabInstance:
       propertyPath: destroyedBoxVFX
       value: 
       objectReference: {fileID: 1928308281132484066, guid: 21e0524288bc31549beb7941bd52d894, type: 3}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 784323943}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BoxDestroyedSound
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SoundEffectsManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2559810838395413726, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
       propertyPath: m_LocalScale.x
       value: 2.54642
@@ -10991,6 +11758,34 @@ PrefabInstance:
       propertyPath: destroyedBoxVFX
       value: 
       objectReference: {fileID: 1928308281132484066, guid: 21e0524288bc31549beb7941bd52d894, type: 3}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 784323943}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BoxDestroyedSound
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SoundEffectsManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2559810838395413726, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
       propertyPath: m_LocalScale.x
       value: 2.54642
@@ -11180,6 +11975,34 @@ PrefabInstance:
       propertyPath: destroyedBoxVFX
       value: 
       objectReference: {fileID: 1928308281132484066, guid: 21e0524288bc31549beb7941bd52d894, type: 3}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 784323943}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BoxDestroyedSound
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SoundEffectsManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2559810838395413726, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
       propertyPath: m_LocalScale.x
       value: 2.54642
@@ -11476,6 +12299,34 @@ PrefabInstance:
       propertyPath: destroyedBoxVFX
       value: 
       objectReference: {fileID: 1928308281132484066, guid: 21e0524288bc31549beb7941bd52d894, type: 3}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 784323943}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BoxDestroyedSound
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SoundEffectsManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2559810838395413726, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
       propertyPath: m_LocalScale.x
       value: 2.54642
@@ -11655,6 +12506,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthManager: {fileID: 702881795}
   staminaVFX: {fileID: 7281369305640630802, guid: b617f3a01ffc85d448023ead4be64914, type: 3}
+  OnGainStamina:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 784323943}
+        m_TargetAssemblyTypeName: SoundEffectsManager, Assembly-CSharp
+        m_MethodName: StaminaSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1261856015
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12093,6 +12959,34 @@ PrefabInstance:
       propertyPath: destroyedBoxVFX
       value: 
       objectReference: {fileID: 1928308281132484066, guid: 21e0524288bc31549beb7941bd52d894, type: 3}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 784323943}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BoxDestroyedSound
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SoundEffectsManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2559810838395413726, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
       propertyPath: m_LocalScale.x
       value: 2.54642
@@ -12728,6 +13622,34 @@ PrefabInstance:
       propertyPath: destroyedBoxVFX
       value: 
       objectReference: {fileID: 1928308281132484066, guid: 21e0524288bc31549beb7941bd52d894, type: 3}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 784323943}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BoxDestroyedSound
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SoundEffectsManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2559810838395413726, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
       propertyPath: m_LocalScale.x
       value: 2.54642
@@ -12932,6 +13854,135 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.9163016, y: 0.9166262, z: 0.91322213}
   m_Center: {x: -0.0014074445, y: 0.0011814534, z: -0.000058010217}
+--- !u!1 &1363054272
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1363054274}
+  - component: {fileID: 1363054273}
+  m_Layer: 0
+  m_Name: Music
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &1363054273
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1363054272}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 01b8881ff63f5424684507fd03f6e215, type: 3}
+  m_Resource: {fileID: 8300000, guid: 01b8881ff63f5424684507fd03f6e215, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.324
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &1363054274
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1363054272}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 869.6196, y: 597.70575, z: -806.526}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1365058685
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13463,6 +14514,34 @@ PrefabInstance:
       propertyPath: destroyedBoxVFX
       value: 
       objectReference: {fileID: 1928308281132484066, guid: 21e0524288bc31549beb7941bd52d894, type: 3}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 784323943}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BoxDestroyedSound
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SoundEffectsManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2559810838395413726, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
       propertyPath: m_LocalScale.x
       value: 2.54642
@@ -13682,6 +14761,34 @@ PrefabInstance:
       propertyPath: destroyedBoxVFX
       value: 
       objectReference: {fileID: 1928308281132484066, guid: 21e0524288bc31549beb7941bd52d894, type: 3}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 784323943}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BoxDestroyedSound
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SoundEffectsManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2559810838395413726, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
       propertyPath: m_LocalScale.x
       value: 2.54642
@@ -14654,6 +15761,34 @@ PrefabInstance:
       propertyPath: destroyedBoxVFX
       value: 
       objectReference: {fileID: 1928308281132484066, guid: 21e0524288bc31549beb7941bd52d894, type: 3}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 784323943}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BoxDestroyedSound
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SoundEffectsManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2559810838395413726, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
       propertyPath: m_LocalScale.x
       value: 2.54642
@@ -15062,6 +16197,34 @@ PrefabInstance:
       propertyPath: destroyedBoxVFX
       value: 
       objectReference: {fileID: 1928308281132484066, guid: 21e0524288bc31549beb7941bd52d894, type: 3}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 784323943}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BoxDestroyedSound
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SoundEffectsManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2559810838395413726, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
       propertyPath: m_LocalScale.x
       value: 2.54642
@@ -15712,6 +16875,34 @@ PrefabInstance:
       propertyPath: destroyedBoxVFX
       value: 
       objectReference: {fileID: 1928308281132484066, guid: 21e0524288bc31549beb7941bd52d894, type: 3}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 784323943}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BoxDestroyedSound
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SoundEffectsManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2559810838395413726, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
       propertyPath: m_LocalScale.x
       value: 2.54642
@@ -16748,6 +17939,34 @@ PrefabInstance:
       propertyPath: destroyedBoxVFX
       value: 
       objectReference: {fileID: 1928308281132484066, guid: 21e0524288bc31549beb7941bd52d894, type: 3}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 784323943}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BoxDestroyedSound
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SoundEffectsManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2559810838395413726, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
       propertyPath: m_LocalScale.x
       value: 2.54642
@@ -17381,6 +18600,34 @@ PrefabInstance:
       propertyPath: destroyedBoxVFX
       value: 
       objectReference: {fileID: 1928308281132484066, guid: 21e0524288bc31549beb7941bd52d894, type: 3}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 784323943}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BoxDestroyedSound
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SoundEffectsManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2559810838395413726, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
       propertyPath: m_LocalScale.x
       value: 2.54642
@@ -18033,6 +19280,142 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.0239127, y: 0.8910112, z: 1.2415047}
   m_Center: {x: -0.00043523312, y: 0.44549444, z: 0.014471322}
+--- !u!1 &1958480930
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1958480931}
+  - component: {fileID: 1958480933}
+  - component: {fileID: 1958480932}
+  m_Layer: 0
+  m_Name: JumpPromptText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1958480931
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1958480930}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.96, y: 1.96, z: 1.96}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 996409790}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -10, y: 0}
+  m_SizeDelta: {x: 200, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1958480932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1958480930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Collect powerup to jump higher!
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 24.25
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 1
+  m_HorizontalAlignment: 4
+  m_VerticalAlignment: 4096
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: -71.60059, y: 0, z: -123.38916, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1958480933
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1958480930}
+  m_CullTransparentMesh: 1
 --- !u!1 &1962660938
 GameObject:
   m_ObjectHideFlags: 0
@@ -18470,6 +19853,34 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2056229542}
     m_Modifications:
+    - target: {fileID: 8501236989772059730, guid: be0820e246bf81240ac95c84ff296b65, type: 3}
+      propertyPath: OnPowerUp.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8501236989772059730, guid: be0820e246bf81240ac95c84ff296b65, type: 3}
+      propertyPath: OnPowerUp.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8501236989772059730, guid: be0820e246bf81240ac95c84ff296b65, type: 3}
+      propertyPath: OnPowerUp.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 784323943}
+    - target: {fileID: 8501236989772059730, guid: be0820e246bf81240ac95c84ff296b65, type: 3}
+      propertyPath: OnPowerUp.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8501236989772059730, guid: be0820e246bf81240ac95c84ff296b65, type: 3}
+      propertyPath: OnPowerUp.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PowerUpSound
+      objectReference: {fileID: 0}
+    - target: {fileID: 8501236989772059730, guid: be0820e246bf81240ac95c84ff296b65, type: 3}
+      propertyPath: OnPowerUp.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SoundEffectsManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8501236989772059730, guid: be0820e246bf81240ac95c84ff296b65, type: 3}
+      propertyPath: OnPowerUp.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 9217383335843823749, guid: be0820e246bf81240ac95c84ff296b65, type: 3}
       propertyPath: m_Name
       value: PowerUp
@@ -18631,6 +20042,128 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.0239127, y: 0.8910112, z: 1.2415047}
   m_Center: {x: -0.0004211177, y: 0.44549444, z: 0.014433175}
+--- !u!1 &2024182483
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2024182488}
+  - component: {fileID: 2024182487}
+  - component: {fileID: 2024182486}
+  - component: {fileID: 2024182485}
+  - component: {fileID: 2024182484}
+  m_Layer: 0
+  m_Name: JumpPromptArea
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2024182484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2024182483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5471cdd8809bb84ea9179651de90cf5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jumpPromptUI: {fileID: 996409789}
+--- !u!65 &2024182485
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2024182483}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &2024182486
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2024182483}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &2024182487
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2024182483}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &2024182488
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2024182483}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.43999863, y: 2.6100006, z: 404.52}
+  m_LocalScale: {x: 20.389, y: 20.455, z: 0.2854757}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2038394766
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18896,6 +20429,34 @@ PrefabInstance:
       propertyPath: destroyedBoxVFX
       value: 
       objectReference: {fileID: 1928308281132484066, guid: 21e0524288bc31549beb7941bd52d894, type: 3}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 784323943}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BoxDestroyedSound
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SoundEffectsManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2559810838395413726, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
       propertyPath: m_LocalScale.x
       value: 2.54642
@@ -19196,6 +20757,34 @@ PrefabInstance:
       propertyPath: destroyedBoxVFX
       value: 
       objectReference: {fileID: 1928308281132484066, guid: 21e0524288bc31549beb7941bd52d894, type: 3}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 784323943}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BoxDestroyedSound
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SoundEffectsManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094426020272420416, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
+      propertyPath: OnDestroyBox.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2559810838395413726, guid: e37d55d9adae8724c9dcf1dff5b67578, type: 3}
       propertyPath: m_LocalScale.x
       value: 2.54642
@@ -19317,7 +20906,21 @@ MonoBehaviour:
   promptDuration: 1.5
   deathPanel: {fileID: 1740873272}
   isDead: 0
-  audioSource: {fileID: 0}
+  OnDeath:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 784323943}
+        m_TargetAssemblyTypeName: SoundEffectsManager, Assembly-CSharp
+        m_MethodName: LoseSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -19325,6 +20928,9 @@ SceneRoots:
   - {fileID: 273032073}
   - {fileID: 1103572825}
   - {fileID: 2056229542}
+  - {fileID: 2024182488}
   - {fileID: 1497086270}
   - {fileID: 702881797}
   - {fileID: 927077505}
+  - {fileID: 784323944}
+  - {fileID: 1363054274}

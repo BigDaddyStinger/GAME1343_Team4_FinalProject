@@ -2,11 +2,13 @@ using UnityEngine;
 
 public class SoundEffectsManager : MonoBehaviour
 {
+    [SerializeField] AudioSource mainMusic;
     [SerializeField] AudioSource audioSource;
     [SerializeField] AudioClip boxDestroyedSound;
     [SerializeField] AudioClip gainedStaminaSound;
     [SerializeField] AudioClip losingSound;
     [SerializeField] AudioClip powerUpSound;
+
 
     public void BoxDestroyedSound()
     {
@@ -20,6 +22,7 @@ public class SoundEffectsManager : MonoBehaviour
 
     public void LoseSound()
     {
+        mainMusic.Stop();
         audioSource.PlayOneShot(losingSound);
     }
 
