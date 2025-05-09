@@ -13897,7 +13897,7 @@ GameObject:
   - component: {fileID: 1498978245}
   m_Layer: 0
   m_Name: LeftBlockerWall (1)
-  m_TagString: Untagged
+  m_TagString: RightBlocker
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14505,7 +14505,7 @@ GameObject:
   - component: {fileID: 1518750840}
   m_Layer: 0
   m_Name: LeftBlockerWall
-  m_TagString: Untagged
+  m_TagString: LeftBlocker
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14532,7 +14532,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1518750838}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 25b5dc65b9c33bc4bad60445a48a3119, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -17806,19 +17806,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerCamera: {fileID: 0}
-  pcGameUIManager: {fileID: 0}
+  pcGameUIManager: {fileID: 702881795}
   playerRigidBody: {fileID: 1962660942}
   playerAnimator: {fileID: 1893930869}
   playerSpeed: 12
   moveSpeedModifier: 2
   playerJumpForce: 8
+  blockerBounceForce: 1185.3
   time: 0
-  groundCheckDistance: 1.1
+  groundCheckDistance: 1.2
   onLevelCheckDistance: 150
   onLevelElapsedTime: 0
   onLevelKillTimer: 0
   triggerElapsedTime: 0
   triggerResetTimeAmmount: 0.5
+  deathBoolResetTimer: 1
+  deathBoolResetElapsedTime: 1
   maxStamina: 100
   currentStamina: 100
   points: 25
@@ -17831,6 +17834,8 @@ MonoBehaviour:
   pcIsVictory: 0
   isGrounded: 0
   isOnLevel: 0
+  stopLateralLeftMovement: 0
+  stopLateralRightMovement: 0
   Ground:
     serializedVersion: 2
     m_Bits: 8
@@ -18999,12 +19004,11 @@ MonoBehaviour:
   healthManager: {fileID: 702881795}
   staminaFill: {fileID: 231471315}
   maxStamina: 100
-  wallWarning: {fileID: 0}
-  wallFlashDuration: 0.3
   actionPrompt: {fileID: 728347149}
   promptDuration: 1.5
   deathPanel: {fileID: 1740873272}
   isDead: 0
+  audioSource: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

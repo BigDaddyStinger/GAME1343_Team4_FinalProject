@@ -20,6 +20,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float playerSpeed = 1.0f;
     [SerializeField] float moveSpeedModifier = 2.0f;
     [SerializeField] float playerJumpForce = 1.0f;
+    [SerializeField] float blockerBounceForce = 1.0f;
     //[SerializeField] float playerLookSensitivityX = 1.0f;
     //[SerializeField] float playerLookSensitivityY = 1.0f;
     [SerializeField] float time = 0.0f;
@@ -46,6 +47,10 @@ public class PlayerController : MonoBehaviour
     [SerializeField] bool pcIsVictory;
     [SerializeField] bool isGrounded;
     [SerializeField] bool isOnLevel;
+    [SerializeField] bool stopLateralLeftMovement;
+    [SerializeField] bool stopLateralRightMovement;
+
+    Vector2 moveValue;
 
     [SerializeField] LayerMask Ground;
 
@@ -105,7 +110,7 @@ public class PlayerController : MonoBehaviour
         if (!pcIsDead)
         {
             //Debug.Log("I AM MOVING");
-            Vector2 moveValue = playerMovement.ReadValue<Vector2>() * playerSpeed * Time.deltaTime;
+            moveValue = playerMovement.ReadValue<Vector2>() * playerSpeed * Time.deltaTime;
             float magnitude = moveValue.magnitude;
             transform.Translate(moveValue.x, 0, moveValue.y);
 
@@ -253,4 +258,5 @@ public class PlayerController : MonoBehaviour
             playerAnimator.SetBool("isDead", false);
         }
     }
+
 }
